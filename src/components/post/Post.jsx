@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 
 export default function Post({post}) {
     const PF = "https://mern-blog-fa.herokuapp.com/images/";
+    const api_uri = "https://mern-blog-fa.herokuapp.com/api/";
     return (
         <div className="post">
             {post.photo && (
