@@ -5,10 +5,10 @@ import './sidebar.css'
 
 export default function Sidebar() {
     const [cats, setCats]  = useState([]);
-
+    const api_uri = "https://mern-blog-fa.herokuapp.com/api/";
     useEffect(() => {
         const getCats = async ()=>{
-            const res = await axios.get("/categories");
+            const res = await axios.get(api_uri+"/categories");
             setCats(res.data);
         }
         getCats();

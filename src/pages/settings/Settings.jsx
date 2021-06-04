@@ -13,7 +13,7 @@ export default function Settings() {
     const [success, setSuccess] = useState(false);
 
     const PF = "https://mern-blog-fa.herokuapp.com/images/";
-
+    const api_uri = "https://mern-blog-fa.herokuapp.com/api/";
     const handleSubmit = async (e)=>{
         e.preventDefault();        
         dispatch({type:"UPDATE_START"});
@@ -30,13 +30,13 @@ export default function Settings() {
             data.append("file", file);
             updatedUser.profilePic = filename;
             try {
-                await axios.post("/upload", data);
+                await axios.post(api_uri+"/upload", data);
             } catch (err) {
                 console.log(err);
             }
         }
         try {
-            const res = await axios.put("/users/"+ user._id, updatedUser) ;                  
+            const res = await axios.put(api_uri+"/users/"+ user._id, updatedUser) ;                  
             setSuccess(true);
             dispatch({type:"UPDATE_SUCCESS", payload: res.data});
         } catch (err) {

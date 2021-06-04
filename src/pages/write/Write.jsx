@@ -8,7 +8,7 @@ export default function Write() {
     const [desc, setDesc] = useState("");
     const [file, setFile] = useState(null);
     const {user} = useContext(Context);
-
+    const api_uri = "https://mern-blog-fa.herokuapp.com/api/";
     const handleSubmit = async (e)=>{
         e.preventDefault();        
         
@@ -24,13 +24,13 @@ export default function Write() {
             data.append("file", file);
             newPost.photo = filename;
             try {
-                await axios.post("/upload", data);
+                await axios.post(api_uri+"/upload", data);
             } catch (err) {
                 console.log(err);
             }
         }
         try {
-            const res = await axios.post("/posts", newPost) ;                  
+            const res = await axios.post(api_uri+"/posts", newPost) ;                  
             window.location.replace("/post/"+res.data._id)
         } catch (err) {
             console.log(err);
