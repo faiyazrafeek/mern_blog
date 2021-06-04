@@ -8,7 +8,7 @@ export default function Write() {
     const [desc, setDesc] = useState("");
     const [file, setFile] = useState(null);
     const {user} = useContext(Context);
-    const api_uri = "https://mern-blog-fa.herokuapp.com/api/";
+    const api_uri = "https://mern-blog-fa.herokuapp.com/api";
     const handleSubmit = async (e)=>{
         e.preventDefault();        
         

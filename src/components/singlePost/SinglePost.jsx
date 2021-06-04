@@ -7,7 +7,7 @@ import { Context } from '../../context/Context';
 
 export default function SinglePost() {
     const PF = "https://mern-blog-fa.herokuapp.com/images/";
-    const api_uri = "https://mern-blog-fa.herokuapp.com/api/";
+    const api_uri = "https://mern-blog-fa.herokuapp.com/api";
     const location = useLocation()
     const path = location.pathname.split("/")[2];
     const [post, setPost] = useState({});

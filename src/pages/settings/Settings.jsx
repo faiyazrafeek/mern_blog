@@ -13,7 +13,7 @@ export default function Settings() {
     const [success, setSuccess] = useState(false);
 
     const PF = "https://mern-blog-fa.herokuapp.com/images/";
-    const api_uri = "https://mern-blog-fa.herokuapp.com/api/";
+    const api_uri = "https://mern-blog-fa.herokuapp.com/api";
     const handleSubmit = async (e)=>{
         e.preventDefault();        
         dispatch({type:"UPDATE_START"});

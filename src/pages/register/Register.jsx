@@ -8,7 +8,7 @@ export default function Register() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
-    const api_uri = "https://mern-blog-fa.herokuapp.com/api/";
+    const api_uri = "https://mern-blog-fa.herokuapp.com/api";
 
     const handleSubmit = async (e) =>{
         e.preventDefault();

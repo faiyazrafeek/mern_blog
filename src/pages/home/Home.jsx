@@ -9,7 +9,7 @@ import { useLocation } from 'react-router'
 export default function Home() {
     const [posts, setPosts] = useState([]);
     const {search} = useLocation();
-    const api_uri = "https://mern-blog-fa.herokuapp.com/api/";
+    const api_uri = "https://mern-blog-fa.herokuapp.com/api";
     
 
     useEffect(() => {

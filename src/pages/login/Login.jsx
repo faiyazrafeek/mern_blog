@@ -8,7 +8,7 @@ export default function Login() {
     const userRef = useRef();
     const passwordRef = useRef();
     const {dispatch, isFetching} = useContext(Context);
-    const api_uri = "https://mern-blog-fa.herokuapp.com/api/";
+    const api_uri = "https://mern-blog-fa.herokuapp.com/api";
     const handleSubmit = async (e) =>{
         e.preventDefault();
 
