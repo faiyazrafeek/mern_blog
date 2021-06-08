@@ -12,7 +12,7 @@ export default function Settings() {
     const [password, setPassword] = useState("");
     const [success, setSuccess] = useState(false);
 
-    const PF = "https://mern-blog-fa.herokuapp.com/images/";
+    const PF = "https://mernblog.s3.amazonaws.com/";
     const api_uri = "https://mern-blog-fa.herokuapp.com/api";
     const handleSubmit = async (e)=>{
         e.preventDefault();        

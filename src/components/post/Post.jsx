@@ -2,7 +2,7 @@ import './post.css'
 import {Link} from 'react-router-dom';
 
 export default function Post({post}) {
-    const PF = "https://mern-blog-fa.herokuapp.com/images/";
+    const PF = "https://mernblog.s3.amazonaws.com/";
     
     return (
         <div className="post">
@@ -15,7 +15,7 @@ export default function Post({post}) {
                 <div className="post-cats">
                 {
                     post.categories.map((c,id)=>(
-                        <Link key={c} to={`/?cat=${c}`} className=" post-cat link">
+                        <Link key={c} to={`/?cat=${c}`} className="post-cat link">
                         {c}
                         </Link>
                     ))
