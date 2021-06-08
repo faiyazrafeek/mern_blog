@@ -55,7 +55,6 @@ export default function Settings() {
                 <form className="settings-form" onSubmit={handleSubmit}>
                     <label>Profile Picture</label>
                     <div className="settings-profile">
-                        {console.log(user.profilePic)}
                         <img src={file ? URL.createObjectURL(file) : PF + user.profilePic} alt="" />
                         <label htmlFor="fileInput">
                             <i className="settings-profile-icon far fa-user-circle"></i>
